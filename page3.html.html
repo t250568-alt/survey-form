@@ -172,9 +172,24 @@
 </a>
 
 <a href="page4.html.html"
+  onclick="seveData()"
    style="border:1px solid black; padding:8px 16px; text-decoration:none; color:black;">
 次へ
 </a>
 
 <br><br><br>
- </form>
+  </form>
+
+  <script>
+function saveData() {
+  for (let i = 19; i <= 27; i++) {
+    let selected = document.querySelector(`input[name="q${i}"]:checked`);
+    if (selected) {
+      localStorage.setItem(`q${i}`, selected.value);
+    }
+  }
+}
+</script>
+
+</body>
+</html>
