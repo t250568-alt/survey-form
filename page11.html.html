@@ -172,9 +172,25 @@
 
 
 <a href="page12.html.html"
+  onclick="saveData()"
    style="border:1px solid black; padding:8px 16px; text-decoration:none; color:black;">
 次へ
 </a>
 
 <br><br><br>
- </form>
+
+   </form>
+
+  <script>
+function saveData() {
+  for (let i = 91; i <= 99; i++) {
+    let selected = document.querySelector(`input[name="q${i}"]:checked`);
+    if (selected) {
+      localStorage.setItem(`q${i}`, selected.value);
+    }
+  }
+}
+</script>
+
+</body>
+</html>
