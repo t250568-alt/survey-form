@@ -177,11 +177,29 @@
 戻る
 </a>
 
-<a href="thanks.html"
+<a href="#"
+  onclick="saveAndSubmit()"
    style="border:1px solid black; padding:8px 16px; text-decoration:none; color:black;">
 送信
 </a>
 
 
 <br><br><br>
- </form>
+
+   </form>
+
+  <script>
+function saveAndSubmit() {
+  for (let i = 127; i <= 135; i++) {
+    let selected = document.querySelector(`input[name="q${i}"]:checked`);
+    if (selected) {
+      localStorage.setItem(`q${i}`, selected.value);
+    }
+  }
+
+  alert("回答を送信しました")；
+}
+</script>
+
+</body>
+</html>
