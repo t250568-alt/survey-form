@@ -214,8 +214,8 @@ function saveAndSubmit() {
   })
   .then(response => response.text())
   .then(data => {
-    alert("送信完了しました！");
     localStorage.clear();
+    location.href= "thanks.html";
   });
 }
 </script>
