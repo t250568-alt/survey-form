@@ -18,7 +18,7 @@
    名前: <input type="text"　id="name"><br><br>
 
     性別:
-    <select>
+    <select id="gender">
       <option value="">選択してください</option>
       <option>男性</option>
       <option>女性</option>
@@ -27,7 +27,7 @@
     </select><br><br>
 
     年齢:満
-    <input type="number" min="0" max="120">歳 </form> <br>
+    <input type="number" id="age" min="0" max="120">歳 </form> <br>
 
 <p>
 この調査は，形容語を利用して，都市に対するイメージについて調べるものです。<br>
@@ -208,8 +208,8 @@
 <script>
 function saveData() {
   localStorage.setItem("name", document.getElementById("name").value);
-  localStorage.setItem("gender", document.querySelector("select").value);
-  localStorage.setItem("age", document.querySelector('input[type="number"]').value);
+  localStorage.setItem("gender", document.getElementById("gender").value);
+  localStorage.setItem("age", document.getElementById("age").value);
 
   for (let i = 1; i <= 9; i++) {
     let selected = document.querySelector(`input[name="q${i}"]:checked`);
