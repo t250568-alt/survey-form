@@ -203,7 +203,7 @@ function saveAndSubmit() {
     answers["q" + i] = localStorage.getItem("q" + i);
   }
 
-  fetch("https://script.google.com/macros/s/AKfycbxOBUK1El7gB3EpKd_tnkatDiHuE9tVTJ9QQFKHdLRbaHAMAyk8aCb8R7-CyQ3LGxjLcA/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbxAxyly_RLPCwoG3gnl-2GEd2xigADyC4hFQ6j1yhMzXWXhlpkLytz8CzaZYfmnU7GPTg/exec", {
     method: "POST",
     body: JSON.stringify({
       name: localStorage.getItem("name"),
